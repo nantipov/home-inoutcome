@@ -1,20 +1,63 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.palettelabs.hioc</groupId>
-  <artifactId>hioc-web</artifactId>
-  <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
 
-  <parent>
-    <groupId>org.palettelabs.homeinoutcome</groupId>
-    <artifactId>hioc-meta</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>hioc-web</artifactId>
+    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-  </parent>
 
-  <dependencies>
-  </dependencies>
+    <parent>
+        <groupId>org.palettelabs.hioc</groupId>
+        <artifactId>hioc-meta</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-server</artifactId>
+            <version>${vaadin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-client-compiled</artifactId>
+            <version>${vaadin.version}</version>
+        </dependency>
+
+        <!-- Optional for extending client-side See: https://vaadin.com/book/-/page/clientside.html
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-client</artifactId>
+            <version>${vaadin.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        -->
+
+        <!-- Optional for optimizing client-side widgets See: https://vaadin.com/book/-/page/mobile.optimization.html
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-client-compiler</artifactId>
+            <version>${vaadin.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        -->
+
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-themes</artifactId>
+            <version>${vaadin.version}</version>
+        </dependency>
+
+        <!-- Optional push support for communication See: https://vaadin.com/book/-/page/advanced.push.html
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-push</artifactId>
+            <version>7.4.2</version>
+        </dependency>
+        -->
+    </dependencies>
 
 </project>
